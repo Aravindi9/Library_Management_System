@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>
+			Library Management System
+		</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style type="text/css">
+			nav
+			{
+				float: right;
+				word-spacing: 30px;
+				padding: 20px;
+			}
+
+			nav li
+			{
+				display: inline-block;
+				line-height: 100px;
+			}
+			.dropdown {
+			float: right;
+			overflow: hidden;
+			}
+
+			.dropdown .dropbtn {
+			font-size: 16px;  
+			border: none;
+			outline: none;
+			color: white;
+			padding: 40px 20px;
+			background-color: inherit;
+			font-family: inherit;
+			margin: 0;
+			}
+
+		
+
+			.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+			}
+
+			.dropdown-content a {
+			float: none;
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+			}
+
+			.dropdown-content a:hover {
+			background-color: #ddd;
+			}
+
+			.dropdown:hover .dropdown-content {
+			display: block;
+			}
+		</style>
+	</head>
+ 
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="logo">
+					<img src="images/3.png"> 
+					<h1 style="color: white; font-size:20px;">LIBRARY MANAGEMENT SYSTEM </h1>
+				</div>
+				  
+				<nav>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="#about">ABOUT</a></li>
+						<div class="dropdown">
+							<button class="dropbtn">CATEGEORY
+								<i class="fa fa-caret-down"></i>
+							</button>
+							<div class="dropdown-content">
+								<a href="books.html">Book</a>
+								<a href="Magazines.html">Magazines</a>
+								<a href="Newspapers.html">Newspapers</a>
+							</div>
+						</div>
+						<li><a href="login.html">LOGIN</a></li>
+						<li><a href="feedback.html">FEEDBACK</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section>
+				<div class="sec_img">
+					<br><br><br>
+					<div class="box">
+						<br><br><br><br>
+						<h1 style="text-align:center; font-size: 35px;">Welcome to library</h1><br><br>
+						<h1 style="text-align:center; font-size:25px">Opens at: 09.00</h1><br>
+						<h1 style="text-align:center;font-size: 25px;">Closes at: 16.00</h1><br>	
+						<p style="text-align: center; font-size: 20px;"><span id="datetime"></span></p>
+						<script>
+							var dt = new Date();
+							document.getElementById("datetime").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (("0"+dt.getDate()).slice(-2)) +"/"+ (dt.getFullYear());
+						</script> 
+						<br>
+						<p style="text-align: center;font-size: 20px;"><span id="datetime1"></span></p>
+						<script>
+							var dt = new Date();
+							document.getElementById("datetime1").innerHTML = dt.toLocaleTimeString();
+						</script>
+					</div>
+				</div>
+			</section>
+				<footer>
+					<p style="color:white;text-align: center;" id="about">
+						<br>
+						Email: &nbsp  Online.library@gmail.com
+						<br><br>
+						Mobile:&nbsp &nbsp 025-2356987
+						
+						
+					</p>
+					
+				</footer>
+				
+		</div>
+		
+	</body> 
+</html>
